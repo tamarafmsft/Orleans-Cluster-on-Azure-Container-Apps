@@ -42,14 +42,14 @@ jobs:
       with:
         creds: ${{ secrets.AzureSPN }}
 
-    - name: Create resource group
-      uses: azure/CLI@v1
-      with:
-        inlineScript: >
-          echo "Creating resource group in Azure"
-          echo "Executing 'az group create -l ${{ env.REGION }} -n ${{ env.RESOURCE_GROUP_NAME }}'"
+    #- name: Create resource group
+      #uses: azure/CLI@v1
+      #with:
+        #inlineScript: >
+         # echo "Creating resource group in Azure"
+          #echo "Executing 'az group create -l ${{ env.REGION }} -n ${{ env.RESOURCE_GROUP_NAME }}'"
 
-          az group create -l ${{ env.REGION }} -n ${{ env.RESOURCE_GROUP_NAME }}
+          #az group create -l ${{ env.REGION }} -n ${{ env.RESOURCE_GROUP_NAME }}
 
     - name: Creating resources
       uses: azure/CLI@v1
